@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-position-y: -165px;
+  background-size: contain;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.black {
+  color: black;
+}
+.heading {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 40px;
+  position: relative;
+}
+
+.circles {
+  height: 145px;
+  width: 145px;
+  position: absolute;
+  z-index: -2;
+  left: 200px;
+  top: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 370px 1fr;
+  grid-template-columns: 1fr 540px 1fr;
+  align-content: center;
+}
+
+.card {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 16px 2px rgba(0, 0, 0, 0.28);
+  box-shadow: 5px 5px 16px 2px rgba(82, 80, 80, 0.1);
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+}
+
+/* ================ Styles for top of card ================ */
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cost {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.price-per-month {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  align-items: center;
+  justify-self: right;
+  grid-gap: 5px;
+}
+
+/* ================ Styles for the range selector ================ */
+
+.views-selector {
+  display: flex;
+  justify-content: center;
+}
+
+.range-bar {
+  appearance: none;
+  width: 430px;
+  height: 7px;
+  border-radius: 8px;
+  opacity: 0.7;
+  outline: none;
+  background: lightgray;
+}
+
+.range-bar::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 28px; /* Set a specific slider handle width */
+  height: 28px; /* Slider handle height */
+  border-radius: 50%;
+  background: lightseagreen;
+  cursor: pointer;
+}
+
+.range-bar::-webkit-slider-thumb:hover {
+  background: rgb(29, 156, 150);
+  -webkit-box-shadow: 2px 1px 22px 5px lightseagreen;
+  box-shadow: 2px 7px 22px 0 lightseagreen;
+}
+
+/* ================ Styles for the toggle input ================ */
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.switch {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  margin: 0 12px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: lightgray;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: rgb(253, 149, 57);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.discount {
+  position: absolute;
+  left: 380px;
+  color: orangered;
+  background-color: peachpuff;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 9px;
+  padding: 2px 5px;
+}
+
+/* =============  Bottom Section ================ */
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid lightgray;
+}
+
+li {
+  list-style-image: url(./images/icon-check.svg);
+  margin: 14px 40px;
+  font-size: 12px;
+}
+
+.trial-btn {
+  color: lightgray;
+  border: none;
+  background-color: midnightblue;
+  padding: 12px 50px;
+  border-radius: 20px;
+  margin-right: 60px;
+  font-size: 11px;
+}
+
+.trial-btn:hover {
+  cursor: pointer;
+  background-color: darkslateblue;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Interactive Pricing</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <img src="./images/pattern-circles.svg" alt="" class="circles" />
+        <h1 class="black">Simple, traffic-based pricing</h1>
+        <h4>Sign-up for our 30-day trial. No credit card required.</h4>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div class="cost">
+            <h4>100K PAGEVIEWS</h4>
+            <div class="price-per-month">
+              <h1 class="black">$16.00</h1>
+              <h4>/ month</h4>
+            </div>
+          </div>
+
+          <div class="views-selector">
+            <input
+              type="range"
+              class="range-bar"
+              id="views"
+              name="views"
+              min="0"
+              max="50"
+            />
+          </div>
+
+          <div class="toggle">
+            <h6>Monthly Billing</h6>
+            <label class="switch">
+              <input type="checkbox" class="toggler" />
+              <span class="slider round"></span>
+            </label>
+            <h6>Yearly Billing</h6>
+            <button class="discount">25% discount</button>
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="features">
+            <ul>
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+          </div>
+          <button class="trial-btn">Start my trial</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
